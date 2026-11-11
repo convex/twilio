@@ -21,6 +21,19 @@ When component APIs change, regenerate and commit the generated files:
 npm run build:codegen
 ```
 
+For a fresh disposable local deployment, configure placeholder Twilio
+credentials before the E2E smoke test:
+
+```sh
+npx convex init
+npx convex env set TWILIO_ACCOUNT_SID AC00000000000000000000000000000000
+npx convex env set TWILIO_AUTH_TOKEN local-test-token
+npm run test:e2e
+```
+
+Do not run that placeholder setup against an existing deployment; use its
+configured credentials instead.
+
 ## Releases
 
 Include a changeset with changes that need a release:

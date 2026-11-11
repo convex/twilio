@@ -3,11 +3,11 @@
   "description": "Convex component for sending/receiving SMS messages with Twilio.",
   "version": "0.2.2",
   "type": "module",
-  "repository": "github:get-convex/twilio",
-  "homepage": "https://github.com/get-convex/twilio#readme",
+  "repository": "github:convex/twilio",
+  "homepage": "https://github.com/convex/twilio#readme",
   "bugs": {
     "email": "support@convex.dev",
-    "url": "https://github.com/get-convex/twilio/issues"
+    "url": "https://github.com/convex/twilio/issues"
   },
   "license": "Apache-2.0",
   "keywords": [
@@ -28,7 +28,7 @@
     "lint": "eslint . && prettier --check .",
     "test": "vitest run --typecheck",
     "check": "npm run test && npm run typecheck && npm run lint",
-    "test:e2e": "convex dev --once --typecheck-components",
+    "test:e2e": "convex init && npm run build:codegen && convex dev --once --typecheck-components",
     "format": "prettier --write .",
     "test:watch": "vitest --typecheck --clearScreen false",
     "test:debug": "vitest --inspect-brk --no-file-parallelism",
