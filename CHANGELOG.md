@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.3
+
+### Patch Changes
+
+- 166fa29: Return the registered component API from the `/test` helper, making
+  it available to tests that use `defineTestApp`.
+
 ## 0.2.2
 
 - Updates types for `ctx` arguments for better compatibility with Convex v1.41+
